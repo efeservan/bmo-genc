@@ -4,7 +4,9 @@
       <div class="form-group-row">
         <h3>Nüfus Bilgileri</h3>
         <div class="form-group row mb-2">
-          <label for="tcNo" class="col-sm-2 col-form-label"><h6>TC Kimlik No</h6></label>
+          <label for="tcNo" class="col-sm-2 col-form-label"
+            ><h6>TC Kimlik No</h6></label
+          >
           <div class="col-sm-6">
             <input
               v-model="form.tcNo"
@@ -20,7 +22,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="name" class="col-sm-2 col-form-label"><h6>Adınız</h6></label>
+          <label for="name" class="col-sm-2 col-form-label"
+            ><h6>Adınız</h6></label
+          >
           <div class="col-sm-6">
             <input
               v-model="form.name"
@@ -32,7 +36,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="surname" class="col-sm-2 col-form-label"><h6>Soyadınız</h6></label>
+          <label for="surname" class="col-sm-2 col-form-label"
+            ><h6>Soyadınız</h6></label
+          >
           <div class="col-sm-6">
             <input
               v-model="form.surname"
@@ -44,7 +50,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="fatherName" class="col-sm-2 col-form-label"><h6>Baba Adı</h6></label>
+          <label for="fatherName" class="col-sm-2 col-form-label"
+            ><h6>Baba Adı</h6></label
+          >
           <div class="col-sm-6">
             <input
               v-model="form.fatherName"
@@ -56,7 +64,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="motherName" class="col-sm-2 col-form-label"><h6>Ana Adı</h6> </label>
+          <label for="motherName" class="col-sm-2 col-form-label"
+            ><h6>Ana Adı</h6>
+          </label>
           <div class="col-sm-6">
             <input
               v-model="form.motherName"
@@ -68,7 +78,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="birthDate" class="col-sm-2 col-form-label"><h6>Doğum Tarihi</h6> </label>
+          <label for="birthDate" class="col-sm-2 col-form-label"
+            ><h6>Doğum Tarihi</h6>
+          </label>
           <div class="col-sm-6">
             <input
               v-model="form.birthDate"
@@ -80,7 +92,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="homeTown" class="col-sm-2 col-form-label"><h6>Doğum Yeri</h6></label>
+          <label for="homeTown" class="col-sm-2 col-form-label"
+            ><h6>Doğum Yeri</h6></label
+          >
           <div class="col-sm-6">
             <input
               v-model="form.homeTown"
@@ -94,9 +108,15 @@
       </div>
       <div class="form-group-row">
         <h3>Öğrenim Bilgileri</h3>
-        <UniversityList v-model="form.selectedUniversityId" ref="universityList" />
+        <UniversityList
+          v-model="form.selectedUniversityId"
+          ref="universityList"
+        />
         <FacultyList v-model="form.selectedFacultyId" ref="facultyList" />
-        <DepartmentList v-model="form.selectedDepartmentId" ref="departmentList" />
+        <DepartmentList
+          v-model="form.selectedDepartmentId"
+          ref="departmentList"
+        />
         <div class="form-group row mb-2">
           <label for="classDegree" class="col-sm-2 col-form-label"
             ><h6>Kayıtlı Olduğu Sınıf</h6></label
@@ -112,7 +132,9 @@
           </div>
         </div>
         <div class="form-group row mb-2">
-          <label for="studentNo" class="col-sm-2 col-form-label"><h6>Öğrenci Numarası</h6> </label>
+          <label for="studentNo" class="col-sm-2 col-form-label"
+            ><h6>Öğrenci Numarası</h6>
+          </label>
           <div class="col-sm-6">
             <input
               v-model="form.studentNo"
@@ -127,7 +149,9 @@
         <div class="form-group-row">
           <label><h3>İletişim Bilgileri</h3></label>
           <div class="form-group row mb-2">
-            <label for="city" class="col-sm-2 col-form-label"><h6>Adres</h6> </label>
+            <label for="city" class="col-sm-2 col-form-label"
+              ><h6>Adres</h6>
+            </label>
             <div class="col-sm-6">
               <textarea
                 v-model="form.city"
@@ -140,7 +164,9 @@
             </div>
           </div>
           <div class="form-group row mb-2">
-            <label for="phoneNumber" class="col-sm-2 col-form-label"><h6>Telefon</h6> </label>
+            <label for="phoneNumber" class="col-sm-2 col-form-label"
+              ><h6>Telefon</h6>
+            </label>
             <div class="col-sm-6">
               <input
                 v-model="form.phoneNumber"
@@ -152,9 +178,12 @@
             </div>
           </div>
           <div class="form-group row mb-2">
-            <label for="email" class="col-sm-2 col-form-label"><h6>Email</h6></label>
+            <label for="email" class="col-sm-2 col-form-label"
+              ><h6>Email</h6></label
+            >
             <div class="col-sm-6">
               <input
+                v-model="form.email"
                 type="text"
                 class="form-control form-control-sm"
                 id="email"
@@ -163,7 +192,9 @@
             </div>
           </div>
           <div class="form-group row mb-2">
-            <label for="iletisim" class="col-sm-2 col-form-label"><h6>İletişim Tercihi</h6></label>
+            <label for="communicationPreference" class="col-sm-2 col-form-label"
+              ><h6>İletişim Tercihi</h6></label
+            >
             <div class="col-sm-6">
               <div class="form-check">
                 <input
@@ -172,9 +203,11 @@
                   value="Telefon"
                   id="phoneOption"
                   name="communicationPreference"
-                  v-model="communicationPreferences"
+                  v-model="form.communicationPreference"
                 />
-                <label class="form-check-label" for="phoneOption"> Telefon</label>
+                <label class="form-check-label" for="phoneOption">
+                  Telefon</label
+                >
               </div>
               <div class="form-check">
                 <input
@@ -183,81 +216,88 @@
                   value="Email"
                   name="communicationPreference"
                   id="emailOption"
-                  v-model="communicationPreferences"
+                  v-model="form.communicationPreference"
                   checked
                 />
-                <label class="form-check-label" for="emailOption"> Email </label>
+                <label class="form-check-label" for="emailOption">
+                  Email
+                </label>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-danger" :disabled="!isFormValid">Kaydet</button>
+        <button type="submit" class="btn btn-danger" :disabled="!isFormValid">
+          Kaydet
+        </button>
       </div>
     </div>
   </form>
 </template>
 
 <script>
-import axios from 'axios'
-import UniversityList from '../university/UniversityList.vue'
-import FacultyList from '../faculty/FacultyList.vue'
-import DepartmentList from '../department/DepartmentList.vue'
+import axios from "axios";
+import UniversityList from "../university/UniversityList.vue";
+import FacultyList from "../faculty/FacultyList.vue";
+import DepartmentList from "../department/DepartmentList.vue";
 
 export default {
   components: {
     UniversityList,
     FacultyList,
-    DepartmentList
+    DepartmentList,
   },
   data() {
     return {
       form: {
-        tcNo: '',
-        name: '',
-        surname: '',
-        fatherName: '',
-        motherName: '',
-        birthDate: '',
-        homeTown: '',
+        tcNo: "",
+        name: "",
+        surname: "",
+        fatherName: "",
+        motherName: "",
+        birthDate: "",
+        homeTown: "",
         selectedUniversityId: null,
-        selectedUniversityName: '',
-        selectedFacultyName: '',
+        selectedUniversityName: "",
+        selectedFacultyName: "",
         selectedFacultyId: null,
         selectedDepartmentId: null,
-        selectedDepartmentName: '',
-        studentNo: '',
-        classDegree: '',
-        city: '',
-        phoneNumber: '',
-        email: '',
-        communicationPreferences: ''
-        //contactPreference: 'phone'
+        selectedDepartmentName: "",
+        studentNo: "",
+        classDegree: "",
+        city: "",
+        phoneNumber: "",
+        email: "",
+        communicationPreference: "",
       },
-      show: true
-    }
+      show: true,
+    };
   },
   computed: {
     // Validation for TC No
     isTcNoValid() {
-      const tcNoPattern = /^\d{11}$/
-      return tcNoPattern.test(this.form.tcNo)
+      const tcNoPattern = /^\d{11}$/;
+      return tcNoPattern.test(this.form.tcNo);
     },
     // Form validation (can add other validations if needed)
     isFormValid() {
-      return this.isTcNoValid
-    }
+      return this.isTcNoValid;
+    },
   },
   methods: {
     async onSubmit() {
-      const university = this.getUniversityNameById(this.form.selectedUniversityId)
-      const faculty = this.getFacultyNameById(this.form.selectedFacultyId)
-      const department = this.getDepartmentNameById(this.form.selectedDepartmentId)
+      const university = this.getUniversityNameById(
+        this.form.selectedUniversityId
+      );
+      const faculty = this.getFacultyNameById(this.form.selectedFacultyId);
+      const department = this.getDepartmentNameById(
+        this.form.selectedDepartmentId
+      );
 
-      console.log('University Name:', university)
-      console.log('Faculty Name:', faculty)
-      console.log('Department Name:', department)
+      const formattedBirthDate = new Date(this.form.birthDate)
+        .toISOString()
+        .split("T")[0];
 
       const payload = {
         tcNo: this.form.tcNo,
@@ -268,47 +308,57 @@ export default {
         fatherName: this.form.fatherName,
         motherName: this.form.motherName,
         homeTown: this.form.homeTown,
-        birthDate: this.form.birthDate,
+        birthDate: formattedBirthDate,
         city: this.form.city,
         university,
         faculty,
         department,
         classDegree: this.form.classDegree,
         phoneNumber: this.form.phoneNumber,
-        communicationPreferences: this.form.communicationPreferences
-      }
-      console.log('on Submit : ', payload)
+        communicationPreference: this.form.communicationPreference,
+      };
+      console.log("on Submit : ", JSON.stringify(payload, null, 2));
+
+      console.log(
+        "Sending request to:",
+        "http://localhost:8080/api/student/add"
+      );
       try {
-        const response = await axios.post('http://localhost:8080/api/student/add', payload)
-        alert('Form submitted successfully!')
-        console.log('Server Response:', response.data)
+        const response = await axios.post(
+          "http://localhost:8080/api/student/add",payload,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        alert("Form submitted successfully!");
+        console.log("Server Response:", response.data);
       } catch (error) {
-        console.error('Error submitting form:', error)
-        alert('There was an error submitting the form. Please try again.')
+        console.error("Error submitting form:", error);
       }
     },
 
     getUniversityNameById(id) {
-      const university = this.$refs.universityList.universities.find((u) => u.id === id)
-      return university ? university.name : ''
+      const university = this.$refs.universityList.universities.find(
+        (u) => u.id === id
+      );
+      return university ? university.name : "";
     },
     getFacultyNameById(id) {
-      const faculty = this.$refs.facultyList.faculties.find((f) => f.id === id)
-      return faculty ? faculty.name : ''
+      const faculty = this.$refs.facultyList.faculties.find((f) => f.id === id);
+      return faculty ? faculty.name : "";
     },
     getDepartmentNameById(id) {
-      const department = this.$refs.departmentList.departments.find((d) => d.id === id)
-      return department ? department.name : ''
+      const department = this.$refs.departmentList.departments.find(
+        (d) => d.id === id
+      );
+      return department ? department.name : "";
     },
     onReset(event) {
-      console.log('on Reset : ', this.form)
-      event.preventDefault()
-      // Reset our form values
-      this.form.email = ''
-      this.form.name = ''
-      this.form.tcNo = null
-      this.form.address = ''
-    }
-  }
-}
+      console.log("on Reset : ", this.form);
+      event.preventDefault();
+    },
+  },
+};
 </script>
