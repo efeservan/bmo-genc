@@ -325,15 +325,16 @@ export default {
       );
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/student/add",payload,
+          "http://localhost:8080/api/student/add",
+          payload,
           {
             headers: {
               "Content-Type": "application/json",
             },
           }
         );
-        alert("Form submitted successfully!");
         console.log("Server Response:", response.data);
+        this.onReset();
       } catch (error) {
         console.error("Error submitting form:", error);
       }
@@ -357,7 +358,27 @@ export default {
     },
     onReset(event) {
       console.log("on Reset : ", this.form);
-      event.preventDefault();
+      this.form = {
+        tcNo: "",
+        name: "",
+        surname: "",
+        fatherName: "",
+        motherName: "",
+        birthDate: "",
+        homeTown: "",
+        selectedUniversityId: null,
+        selectedUniversityName: "",
+        selectedFacultyName: "",
+        selectedFacultyId: null,
+        selectedDepartmentId: null,
+        selectedDepartmentName: "",
+        studentNo: "",
+        classDegree: "",
+        city: "",
+        phoneNumber: "",
+        email: "",
+        communicationPreference: "",
+      };
     },
   },
 };
