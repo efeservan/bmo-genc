@@ -10,7 +10,7 @@
       </div>
       <!-- Container 2: Add Student -->
       <div class="col">
-        <div class="icon-container" @click="currentComponent = 'AddStudent'">
+        <div class="icon-container" @click="currentComponent = 'AdminApprove'">
           <i class="bi bi-plus-circle" style="font-size: 48px"></i>
           <p>Onayda Bekleyenler</p>
         </div>
@@ -26,7 +26,7 @@
       </div>
       <!-- Container 4: View Reports -->
       <div class="col">
-        <div class="icon-container" @click="currentComponent = 'UpdateUniversity'">
+        <div class="icon-container" @click="currentComponent = 'StudentInfo'">
           <i class="bi bi-bar-chart" style="font-size: 48px"></i>
           <p>Öğrenci Bilgi</p>
         </div>
@@ -40,10 +40,10 @@
 </template>
 
 <script>
-import AddStudent from '../student/AddStudent.vue'
+import AdminApprove from '../adminpanel/AdminApprove.vue'
+import AddStudent from '../student/AddStudent.vue';
+import StudentInfo from '../student/StudentInfo.vue';
 import UpdateStudent from '../student/UpdateStudent.vue'
-import UpdateUniversity from '../university/UpdateUniversity.vue'
-import AdminUniversity from './AdminUniversity.vue'
 
 export default {
   data() {
@@ -53,9 +53,9 @@ export default {
   },
   components: {
     AddStudent,
+    AdminApprove,
     UpdateStudent,
-    UpdateUniversity,
-    AdminUniversity
+    StudentInfo
   }
 }
 </script>

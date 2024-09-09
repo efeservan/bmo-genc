@@ -11,11 +11,11 @@
           <li class="nav-item">
             <a
               class="nav-link active"
-              id="v-pills-home-tab"
+              id="update-tab"
               data-bs-toggle="pill"
-              href="#v-pills-home"
+              href="#update-panel"
               role="tab"
-              aria-controls="v-pills-home"
+              aria-controls="update-panel"
               aria-selected="true"
               style="color: red"
               >Bilgi Güncelle</a
@@ -24,11 +24,11 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              id="v-pills-profile-tab"
+              id="internship-tab"
               data-bs-toggle="pill"
-              href="#v-pills-profile"
+              href="#vinternship-panel"
               role="tab"
-              aria-controls="v-pills-profile"
+              aria-controls="internship-panel"
               aria-selected="false"
               style="color: red"
               >Staj İşlemleri</a
@@ -38,11 +38,11 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              id="v-pills-messages-tab"
+              id="group-tab"
               data-bs-toggle="pill"
-              href="#v-pills-messages"
+              href="#group-panel"
               role="tab"
-              aria-controls="v-pills-messages"
+              aria-controls="group-panel"
               aria-selected="false"
               style="color: red"
               >Bmo Grup ve Komisyon İşlemleri</a
@@ -51,11 +51,11 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              id="v-pills-messages-tab"
+              id="mentor-tab"
               data-bs-toggle="pill"
-              href="#v-pills-messages"
+              href="#mentor-panel"
               role="tab"
-              aria-controls="v-pills-messages"
+              aria-controls="mentor-panel"
               aria-selected="false"
               style="color: red"
               >Mentörlük İşlemleri</a
@@ -64,11 +64,11 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              id="v-pills-messages-tab"
+              id="event-tab"
               data-bs-toggle="pill"
-              href="#v-pills-messages"
+              href="#event-panel"
               role="tab"
-              aria-controls="v-pills-messages"
+              aria-controls="event-panel"
               aria-selected="false"
               style="color: red"
               >Etkinlik ve Duyurular</a
@@ -77,11 +77,11 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              id="v-pills-messages-tab"
+              id="settings-tab"
               data-bs-toggle="pill"
-              href="#v-pills-messages"
+              href="#settings-panel"
               role="tab"
-              aria-controls="v-pills-messages"
+              aria-controls="settings-panel"
               aria-selected="false"
               style="color: red"
               >Ayarlar</a
@@ -95,27 +95,51 @@
           <div class="tab-content flex-grow-1 p-5" id="v-pills-tabContent">
             <div
               class="tab-pane fade show active"
-              id="v-pills-home"
+              id="update-panel"
               role="tabpanel"
-              aria-labelledby="v-pills-home-tab"
+              aria-labelledby="update-tab"
             >
               <UpdateStudent />
             </div>
             <div
               class="tab-pane fade"
-              id="v-pills-profile"
+              id="internship-panel"
               role="tabpanel"
-              aria-labelledby="v-pills-profile-tab"
+              aria-labelledby="internship-tab"
             >
               <InternshipApply />
             </div>
             <div
               class="tab-pane fade"
-              id="v-pills-messages"
+              id="group-panel"
               role="tabpanel"
-              aria-labelledby="v-pills-messages-tab"
+              aria-labelledby="group-tab"
             >
-              <StudentApp />
+              <StudentGroup />
+            </div>
+            <div
+              class="tab-pane fade"
+              id="mentor-panel"
+              role="tabpanel"
+              aria-labelledby="mentor-tab"
+            >
+              <StudentMentor />
+            </div>
+            <div
+              class="tab-pane fade"
+              id="event-panel"
+              role="tabpanel"
+              aria-labelledby="event-tab"
+            >
+              <StudentEvent />
+            </div>
+            <div
+              class="tab-pane fade"
+              id="settings-panel"
+              role="tabpanel"
+              aria-labelledby="settings-tab"
+            >
+              <StudentSettings />
             </div>
           </div>
           <div class="container-footer text-muted"></div>
@@ -129,8 +153,9 @@
 <script lang="ts">
 import FooterApp from '../main/FooterApp.vue'
 import InternshipApply from '../student/InternshipApply.vue'
-import StudentApp from '../panel/StudentApp.vue'
+import StudentApp from '../adminpanel/StudentApp.vue'
 import UpdateStudent from '../student/UpdateStudent.vue'
+import StudentGroup from '../student/StudentGroup.vue';
 
 export default {
   name: 'StudentDashboard',
@@ -139,6 +164,7 @@ export default {
     UpdateStudent,
     StudentApp,
     InternshipApply,
+    StudentGroup,
     FooterApp
   }
 }

@@ -2,7 +2,7 @@
   <div class="container mt-4">
     <div class="row text-center">
       <div class="col">
-        <div class="icon-container" @click="currentComponent = 'AddUniversity'">
+        <div class="icon-container" @click="currentComponent = 'AdminGroups'">
           <i class="bi bi-plus-circle" style="font-size: 48px"></i>
           <p>Kamp Sorumlusu Ekleme</p>
         </div>
@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import AddUniversity from '../university/AddUniversity.vue'
 import AddStudent from '../student/AddStudent.vue'
+import AdminGroups from './AdminGroups.vue';
 
 export default {
   data() {
@@ -36,7 +36,7 @@ export default {
       currentComponent: null // Initially, no component is displayed
     }
   },
-  components: { AddUniversity, AddStudent }
+  components: { AddStudent, AdminGroups }
 }
 </script>
 
