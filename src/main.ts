@@ -1,8 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import 'bootstrap/dist/css/bootstrap.min.css' // Import Bootstrap CSS
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import 'vue-select/dist/vue-select.css'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-createApp(App).use(router).mount('#app')
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+import "vue-select/dist/vue-select.css";
+import { BTable } from "bootstrap-vue-next";
+
+const app = createApp(App);
+app.use(router);
+app.component("BTable", BTable);
+app.mount("#app");

@@ -173,13 +173,13 @@
 
 <script lang="ts">
 import FooterApp from './FooterApp.vue'
-import AdminStudent from '../panel/AdminStudent.vue'
-import AdminUniversity from '../panel/AdminUniversity.vue'
-import AdminGroups from '../panel/AdminGroups.vue'
-import AdminMentor from '../panel/AdminMentor.vue'
-import AdminInternship from '../panel/AdminInternship.vue'
-import AdminCamp from '../panel/AdminCamp.vue'
-import AdminReports from '../panel/AdminReports.vue'
+import AdminStudent from '../adminpanel/AdminStudent.vue'
+import AdminUniversity from '../adminpanel/AdminUniversity.vue'
+import AdminGroups from '../adminpanel/AdminGroups.vue'
+import AdminMentor from '../adminpanel/AdminMentor.vue'
+import AdminInternship from '../adminpanel/AdminInternship.vue'
+import AdminCamp from '../adminpanel/AdminCamp.vue'
+import AdminReports from '../adminpanel/AdminReports.vue'
 
 export default {
   name: 'AdminDashboard',
